@@ -14,7 +14,7 @@ Welcome to the Jokes API project! This project aims to provide a solution for Ge
 
 ## Installation
 
-To use this project, you will need to [install python 3.* and above]. Once you have those installed, you can download or clone the project to your local machine. 
+To use this project, you will need to install `python 3.5 and above`. Once you have those installed, you can download or clone the project to your local machine. 
 
 git clone https://github.com/saber-khakbiz/JokesApi.git
 
@@ -45,6 +45,6 @@ If you have any questions or comments about this project, please contact us at `
 
 ## More
 To see more, please visit :
- -[Jokes Api Sites](https://rapidapi.com/collection/jokes)
- -[Maktabkhooneh](https://maktabkhooneh.org/course/%D8%B4%DB%8C%D8%A1-%DA%AF%D8%B1%D8%A7%DB%8C%DB%8C-%D9%BE%D8%A7%DB%8C%D8%AA%D9%88%D9%86-mk2032/)
+1. [Jokes Api Sites](https://rapidapi.com/collection/jokes)
+2. [Maktabkhooneh](https://maktabkhooneh.org/course/%D8%B4%DB%8C%D8%A1-%DA%AF%D8%B1%D8%A7%DB%8C%DB%8C-%D9%BE%D8%A7%DB%8C%D8%AA%D9%88%D9%86-mk2032/)
 
