@@ -16,7 +16,7 @@ Welcome to the Jokes API project! This project aims to provide a solution for Ge
 
 To use this project, you will need to install `python 3.5 and above`. Once you have those installed, you can download or clone the project to your local machine. 
 
-git clone https://github.com/saber-khakbiz/JokesApi.git
+`git clone https://github.com/saber-khakbiz/JokesApi.git`
 
 
 ## Usage
