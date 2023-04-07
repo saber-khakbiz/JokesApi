@@ -3,6 +3,12 @@
 <p align="center"><strong>:smile: Welcome to the Jokes API project! This project aims to provide a solution for Get random endless Joke. :smile:</strong></p> 
 
 
+![Jokes ApI with python](https://github.com/saber-khakbiz/JokesApi/blob/master/images/JokesApi.jpg)
+
+
+
+## Project Status
+
 ![Security Headers](https://img.shields.io/security-headers?url=https%3A%2F%2Fgithub.com%2Fsaber-khakbiz)
 ![GitHub last commit](https://img.shields.io/github/last-commit/saber-khakbiz/jokesapi)
 ![GitHub](https://img.shields.io/github/license/saber-khakbiz/jokesapi)
@@ -10,11 +16,6 @@
 ![GitHub language count](https://img.shields.io/github/languages/count/saber-khakbiz/jokesapi)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/saber-khakbiz/jokesapi)
 ![GitHub Sponsors](https://img.shields.io/github/sponsors/python)
-
-
-
-
-![Jokes ApI with python](https://github.com/saber-khakbiz/JokesApi/blob/master/images/JokesApi.jpg)
 
 
 
@@ -56,7 +57,7 @@ This project is licensed under the `MIT license`. See the [LICENSE](LICENSE) fil
 
 If you have any questions or comments about this project, please contact us at `ojgi30tt@duck.com`.
 
-## More
+## More Information
 To see more, please visit :
 1. [Jokes Api Sites](https://rapidapi.com/collection/jokes)
 2. [Maktabkhooneh](https://maktabkhooneh.org/course/%D8%B4%DB%8C%D8%A1-%DA%AF%D8%B1%D8%A7%DB%8C%DB%8C-%D9%BE%D8%A7%DB%8C%D8%AA%D9%88%D9%86-mk2032/)
