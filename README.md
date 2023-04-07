@@ -1,9 +1,18 @@
 # Jokes API
+Welcome to the Jokes API project! This project aims to provide a solution for Get random endless Joke.
+
+![GitHub last commit](https://img.shields.io/github/last-commit/saber-khakbiz/jokesapi?style=for-the-badge)
+![GitHub](https://img.shields.io/github/license/saber-khakbiz/jokesapi?style=for-the-badge)
+![GitHub branch checks state](https://img.shields.io/github/checks-status/saber-khakbiz/jokesapi/master?style=for-the-badge)
+![GitHub language count](https://img.shields.io/github/languages/count/saber-khakbiz/jokesapi?style=for-the-badge)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/saber-khakbiz/jokesapi?style=for-the-badge)
+
+
+
 
 ![Jokes ApI with python](https://github.com/saber-khakbiz/JokesApi/blob/master/images/JokesApi.jpg)
 
 
-Welcome to the Jokes API project! This project aims to provide a solution for Get random endless Joke. The project is built with python.
 
 ## Table of Contents
 
