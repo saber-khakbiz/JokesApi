@@ -1,6 +1,6 @@
 # Jokes API
 
-:smile: <p align="center"><strong>Welcome to the Jokes API project! This project aims to provide a solution for Get random endless Joke.</strong></p> :smile:
+<p align="center"><strong>:smile: Welcome to the Jokes API project! This project aims to provide a solution for Get random endless Joke. :smile:</strong></p> 
 
 
 ![Security Headers](https://img.shields.io/security-headers?url=https%3A%2F%2Fgithub.com%2Fsaber-khakbiz)
