@@ -1,5 +1,6 @@
 import socket
 import requests
+from cowsay import cow
 from abc import ABC, abstractmethod
 from err_handel import NoInternetConnectionError, JokeAPIError
 
@@ -51,4 +52,4 @@ if __name__ == "__main__":
     
     joke_api_y = JokeAPIY()
     joke1 = joke_api_y.get_random_joke()
-    print(joke1)
+    cow(joke1)
