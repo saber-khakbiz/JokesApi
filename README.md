@@ -31,8 +31,8 @@ To use this project, you will need to install `python 3.5 and above`. Once you h
 
 To use the project:
 
-1. fist install requirements => `pip install -r requirements.txt`
-2. second run => `python.exe jokesapi.py`.
+1. first install requirements => `pip install -r requirements.txt`
+2. second run file => `python.exe jokesapi.py`.
 
 You can also include any examples or screenshots to demonstrate the functionality of the project.
 
