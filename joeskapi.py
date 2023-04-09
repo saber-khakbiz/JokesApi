@@ -1,23 +1,25 @@
 import socket
 import requests
 from abc import ABC, abstractmethod
-
+from err_handel import NoInternetConnectionError, JokeAPIError
 
 # Create an abstract class Joke that contains an abstract method get_random_joke
 
 
 class Joke(ABC):
+
+    def __init__(self) -> None:
+        try:
+            # Try to establish a connection to google DNS server
+            socket.create_connection(('8.8.8.8', 53), timeout=3)
+        except OSError:
+            # If a connection could not be established, raise an error
+            raise NoInternetConnectionError('No internet connection')
+
     @abstractmethod
     def get_random_joke(self):
         pass
 
-
-class JokeAPIError(Exception):
-    pass
-
-
-class NoInternetConnectionError(Exception):
-    pass
 
 # Create a class JokeAPIY that also inherits from the JokeAPI abstract class
 
@@ -25,13 +27,6 @@ class NoInternetConnectionError(Exception):
 class JokeAPIY(Joke):
 
     def get_random_joke(self):
-
-        try:
-            # Try to establish a connection to google DNS server
-            socket.create_connection(('8.8.8.8', 53), timeout=3)
-        except OSError:
-            # If a connection could not be established, raise an error
-            raise NoInternetConnectionError('No internet connection')
 
         # Send a GET request to the JokeAPIY API and get the response
         response = requests.get('https://v2.jokeapi.dev/joke/Any')
@@ -51,6 +46,9 @@ class JokeAPIY(Joke):
         return json_data['setup'] + '\n' + json_data['delivery']
 
 
-joke_api_y = JokeAPIY()
-joke1 = joke_api_y.get_random_joke()
-print(joke1)
+
+if __name__ == "__main__":
+    
+    joke_api_y = JokeAPIY()
+    joke1 = joke_api_y.get_random_joke()
+    print(joke1)
