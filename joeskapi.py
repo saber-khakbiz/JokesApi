@@ -1,8 +1,9 @@
-import socket
-import requests
-from cowsay import cow
-from abc import ABC, abstractmethod
 from err_handel import NoInternetConnectionError, JokeAPIError
+from cowsay import cow, get_output_string
+from abc import ABC, abstractmethod
+import requests
+import socket
+
 
 # Create an abstract class Joke that contains an abstract method get_random_joke
 
@@ -15,7 +16,8 @@ class Joke(ABC):
             socket.create_connection(('8.8.8.8', 53), timeout=3)
         except OSError:
             # If a connection could not be established, raise an error
-            raise NoInternetConnectionError('No internet connection')
+            raise NoInternetConnectionError(
+                get_output_string('tux', 'No internet connection'))
 
     @abstractmethod
     def get_random_joke(self):
@@ -34,22 +36,23 @@ class JokeAPIY(Joke):
 
         # Check if the response is successful (status code 200)
         if response.status_code != 200:
-            raise JokeAPIError('JokeAPIY API returned an error')
+            raise JokeAPIError(
+                get_output_string('fox', 'JokeAPIY API returned an error'))
 
         # Convert the response to JSON format
         json_data = response.json()
 
         # Check if the JSON response contains the 'setup' and 'delivery' keys
         if 'setup' not in json_data or 'delivery' not in json_data:
-            raise JokeAPIError('JokeAPIY API returned invalid data')
+            raise JokeAPIError(
+                get_output_string('fox', 'JokeAPIY API returned invalid data'))
 
         # Extract the joke and return it
         return json_data['setup'] + '\n' + json_data['delivery']
 
 
-
 if __name__ == "__main__":
-    
+
     joke_api_y = JokeAPIY()
     joke1 = joke_api_y.get_random_joke()
     cow(joke1)
