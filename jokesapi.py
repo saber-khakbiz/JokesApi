@@ -1,30 +1,12 @@
-from err_handel import NoInternetConnectionError, JokeAPIError
-from cowsay import cow, pig, get_output_string
-from abc import ABC, abstractmethod
+from err_handel import JokeAPIError
+from cowsay import cow, pig, beavis, get_output_string
+from joke import Joke
 import requests
-import socket
 import json
 
 
-# Create an abstract class Joke that contains an abstract method get_random_joke
 
-
-class Joke(ABC):
-
-    def __init__(self) -> None:
-        try:
-            # Try to establish a connection to google DNS server
-            socket.create_connection(('8.8.8.8', 53), timeout=3)
-        except OSError:
-            # If a connection could not be established, raise an error
-            raise NoInternetConnectionError(
-                get_output_string('tux', 'No internet connection'))
-
-    @abstractmethod
-    def get_random_joke(self):
-        pass
-
-#!=============================first Class=======================================
+#!=============================First Class=======================================
 # Create a class JokeAPIY that also inherits from the Joke abstract class
 
 
@@ -76,14 +58,38 @@ class JokeAPINinjas(Joke):
         else:
             print("Error:", response.status_code, response.text)
 
-#!+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#!++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
-if __name__ == "__main__":
+#!==================================Third Class=======================================
+# Create a class JokeAPI Chuck Norris that also inherits from the Joke abstract class
 
-    joke_api_y = JokeAPIY()
-    joke1 = joke_api_y.get_random_joke()
-    cow(joke1)
+class JokeAPIChuckNorris(Joke):
 
-    # joke_api_ninjas = JokeAPINinjas()
-    # joke2 = joke_api_ninjas.get_random_joke(limit=2)
+    def get_random_joke(self, category="animal"):
+        # How many results to return. Must be between 1 and 30. Default is 1.
+        self.category = category
+        category_lst = ['animal', 'career', 'celebrity', 'dev', 'explicit',
+                        'fashion', 'food', 'history', 'money', 'movie',
+                        'music', 'political', 'religion', 'science', 'sport', 'travel']
+
+        if self.category in category_lst:
+            api_url = 'https://api.chucknorris.io/jokes/random?category={}'.format(
+                self.category)
+            response = requests.get(api_url)
+
+            if response.status_code == requests.codes.ok:
+
+                joke = json.loads(response.text)
+                beavis(joke["value"])
+
+            else:
+                print("Error:", response.status_code, response.text)
+
+        else:
+            print("404 Category Not Found")
+
+#!+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
